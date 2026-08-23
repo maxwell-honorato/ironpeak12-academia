@@ -1,0 +1,546 @@
+i
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronPeak Academia · Uberaba, MG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!--
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#0a0a0a;
+  --red:#C8102E;
+  --red-dark:#8B0A1F;
+  --white:#F5F0EA;
+  --gray:#1a1a1a;
+}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 4rem;background:rgba(10,10,10,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.05)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:0.1em;color:var(--white);text-decoration:none}
+.logo span{color:var(--red)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:var(--white);text-decoration:none;font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.65;transition:opacity 0.2s}
+.nav-links a:hover{opacity:1}
+.nav-cta{background:var(--red);color:var(--white);padding:0.6rem 1.6rem;font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background 0.2s}
+.nav-cta:hover{background:var(--red-dark)}
+
+/* HERO */
+section.hero{height:100vh;position:relative;display:flex;align-items:flex-end}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1800&q=85') center/cover no-repeat;filter:brightness(0.32)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,10,10,0.9) 35%,rgba(10,10,10,0.2))}
+.hero-content{position:relative;z-index:2;padding:0 4rem 7rem;max-width:680px}
+.hero-eyebrow{font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--red);margin-bottom:1.2rem;font-weight:500;display:block}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(4.5rem,9vw,8.5rem);line-height:0.9;letter-spacing:0.02em;margin-bottom:1.5rem}
+.hero-title span{color:var(--red)}
+.hero-sub{font-size:1rem;opacity:0.6;line-height:1.75;margin-bottom:2.5rem;max-width:440px;font-weight:300}
+.hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.btn-primary{background:var(--red);color:var(--white);padding:0.95rem 2.4rem;font-size:0.82rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;text-decoration:none;display:inline-block;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s}
+.btn-primary:hover{background:var(--red-dark)}
+.btn-outline{color:var(--white);padding:0.95rem 2rem;font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;background:none;border:1px solid rgba(255,255,255,0.3);font-family:'DM Sans',sans-serif;text-decoration:none;transition:border-color 0.2s}
+.btn-outline:hover{border-color:var(--white)}
+.hero-badge{position:absolute;right:4rem;bottom:7rem;z-index:2;text-align:right}
+.hero-badge-num{font-family:'Bebas Neue',sans-serif;font-size:5.5rem;color:var(--red);line-height:1}
+.hero-badge-lbl{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;opacity:0.45;margin-top:0.2rem}
+
+/* STATS BAR */
+.stats-bar{background:var(--red);padding:1.1rem 4rem;display:flex;justify-content:space-between;align-items:center}
+.stat-item{text-align:center}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.1rem;line-height:1}
+.stat-lbl{font-size:0.67rem;letter-spacing:0.2em;text-transform:uppercase;opacity:0.85;margin-top:0.1rem}
+.stat-div{width:1px;height:36px;background:rgba(255,255,255,0.28)}
+
+/* PHOTO STRIP */
+.photo-strip{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;height:420px;gap:2px}
+.photo-strip-item{overflow:hidden;position:relative}
+.photo-strip-item img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-strip-item .overlay-label{position:absolute;bottom:1rem;left:1rem;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.08em;background:rgba(10,10,10,0.75);padding:0.3rem 0.7rem;color:var(--white)}
+
+/* SECTION COMMONS */
+.section-label{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--red);margin-bottom:0.9rem;font-weight:500;display:block}
+.section-title{font-family:'Bebas Neue',sans-serif;line-height:0.93;margin-bottom:1.4rem}
+
+/* ABOUT */
+section.about{padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.about-imgs img{width:100%;object-fit:cover;display:block}
+.about-imgs img:first-child{grid-row:span 2;height:520px}
+.about-imgs img:not(:first-child){height:254px}
+.about-text-wrap p{opacity:0.58;line-height:1.8;font-size:0.95rem;font-weight:300;margin-bottom:1.5rem}
+.feature-list{display:flex;flex-direction:column;gap:0.9rem;margin-top:0.5rem}
+.feature-item{display:flex;align-items:center;gap:0.9rem;font-size:0.88rem;opacity:0.85}
+.feature-dot{width:5px;height:5px;background:var(--red);flex-shrink:0;border-radius:50%}
+
+/* CLASSES */
+section.classes{padding:7rem 4rem;background:var(--gray)}
+.classes-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem}
+.classes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.class-card{position:relative;overflow:hidden;background:#111}
+.class-card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;filter:brightness(0.55)}
+.class-overlay{position:absolute;bottom:0;left:0;right:0;padding:1.4rem 1.2rem;background:linear-gradient(to top,rgba(0,0,0,0.92) 55%,transparent)}
+.class-name{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:0.04em;display:block;margin-bottom:0.2rem}
+.class-tag{font-size:0.67rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);font-weight:500}
+.class-desc{font-size:0.78rem;opacity:0.6;margin-top:0.5rem;line-height:1.55}
+
+/* TRAINERS */
+section.trainers{padding:7rem 4rem}
+.trainers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:2.5rem}
+.trainer-card{position:relative;overflow:hidden;background:#111}
+.trainer-card img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;filter:brightness(0.65)}
+.trainer-info{position:absolute;bottom:0;left:0;right:0;padding:1.4rem 1.2rem;background:linear-gradient(to top,rgba(0,0,0,0.9) 60%,transparent)}
+.trainer-name{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.04em;display:block}
+.trainer-role{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);font-weight:500;margin-top:0.15rem;display:block}
+
+/* SPACE */
+section.space{padding:7rem 4rem;background:var(--gray)}
+.space-gallery{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:280px 280px;gap:6px;margin-top:2.5rem}
+.space-gallery .big{grid-column:span 2;grid-row:span 2}
+.space-gallery img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* PLANS */
+section.plans{padding:7rem 4rem}
+.plans-header{text-align:center;margin-bottom:3.5rem}
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:#2a2a2a}
+.plan-card{background:#111;padding:2.8rem 2.4rem}
+.plan-card.featured{background:#0d0d0d;outline:2px solid var(--red)}
+.plan-badge{display:inline-block;background:var(--red);color:var(--white);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.28rem 0.75rem;margin-bottom:1.4rem;font-weight:500}
+.plan-name{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;letter-spacing:0.05em;margin-bottom:0.3rem}
+.plan-price{display:flex;align-items:flex-start;gap:0.2rem;margin:1.4rem 0}
+.plan-currency{font-size:1.1rem;margin-top:0.5rem;opacity:0.55}
+.plan-amount{font-family:'Bebas Neue',sans-serif;font-size:4.8rem;line-height:1;color:var(--red)}
+.plan-period{font-size:0.72rem;opacity:0.45;align-self:flex-end;margin-bottom:0.7rem;text-transform:uppercase;letter-spacing:0.1em}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:0.7rem;margin-bottom:2rem;padding:1.4rem 0;border-top:1px solid #2a2a2a}
+.plan-features li{font-size:0.83rem;opacity:0.62;display:flex;gap:0.7rem}
+.plan-features li::before{content:'→';color:var(--red);flex-shrink:0}
+.plan-btn{display:block;text-align:center;padding:0.85rem;font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;background:transparent;border:1px solid #3a3a3a;color:var(--white);cursor:pointer;width:100%;font-family:'DM Sans',sans-serif;transition:border-color 0.2s,color 0.2s;text-decoration:none}
+.plan-btn:hover{border-color:var(--red);color:var(--red)}
+.plan-card.featured .plan-btn{background:var(--red);border-color:var(--red)}
+.plan-card.featured .plan-btn:hover{background:var(--red-dark)}
+
+/* TESTIMONIALS */
+section.testimonials{padding:7rem 4rem;background:var(--gray)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:#2a2a2a;margin-top:2.5rem}
+.testi-card{background:var(--gray);padding:2.4rem}
+.testi-quote{font-size:2.5rem;color:var(--red);margin-bottom:0.8rem;opacity:0.4;line-height:1}
+.testi-text{font-size:0.88rem;line-height:1.8;opacity:0.58;margin-bottom:1.4rem;font-weight:300}
+.testi-author{display:flex;align-items:center;gap:0.9rem}
+.testi-avatar{width:42px;height:42px;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;flex-shrink:0}
+.testi-name{font-weight:500;font-size:0.88rem}
+.testi-since{font-size:0.7rem;opacity:0.38;text-transform:uppercase;letter-spacing:0.1em;margin-top:0.1rem}
+
+/* CTA */
+section.cta{padding:9rem 4rem;position:relative;overflow:hidden;text-align:center}
+.cta-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1600&q=85') center/cover no-repeat;filter:brightness(0.13)}
+.cta-inner{position:relative;z-index:2}
+.cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,7vw,7.5rem);line-height:0.88;margin-bottom:1.8rem}
+.cta-title span{color:var(--red)}
+.cta-sub{opacity:0.45;margin-bottom:2.8rem;font-size:1rem;font-weight:300}
+
+/* FOOTER */
+footer{padding:2.5rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #1e1e1e}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.1em}
+.footer-logo span{color:var(--red)}
+.footer-copy{font-size:0.72rem;opacity:0.3;letter-spacing:0.1em;text-transform:uppercase}
+.footer-social{display:flex;gap:1.5rem}
+.footer-social a{font-size:0.72rem;opacity:0.32;text-decoration:none;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);transition:opacity 0.2s}
+.footer-social a:hover{opacity:0.85}
+
+/* WHATSAPP FLOAT */
+.wa-btn{position:fixed;bottom:1.8rem;right:1.8rem;z-index:200;background:#25D366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 2px 16px rgba(37,211,102,0.35);transition:transform 0.2s}
+.wa-btn:hover{transform:scale(1.08)}
+.wa-btn svg{width:26px;height:26px;fill:#fff}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .hero-content{padding:0 1.5rem 5rem}
+  .hero-badge{right:1.5rem;bottom:5rem}
+  .stats-bar{padding:1rem 1.5rem;flex-wrap:wrap;gap:1rem;justify-content:center}
+  .stat-div{display:none}
+  .photo-strip{grid-template-columns:1fr 1fr;height:auto}
+  .photo-strip-item{height:200px}
+  .photo-strip-item:nth-child(n+3){display:none}
+  section.about{grid-template-columns:1fr;gap:2.5rem;padding:4rem 1.5rem}
+  .about-imgs{grid-template-columns:1fr}
+  .about-imgs img:first-child{height:300px;grid-row:auto}
+  .about-imgs img:not(:first-child){height:200px}
+  section.classes{padding:4rem 1.5rem}
+  section.trainers{padding:4rem 1.5rem}
+  section.space{padding:4rem 1.5rem}
+  section.plans{padding:4rem 1.5rem}
+  section.testimonials{padding:4rem 1.5rem}
+  section.cta{padding:6rem 1.5rem}
+  .classes-grid,.trainers-grid{grid-template-columns:1fr 1fr}
+  .classes-intro{flex-direction:column;align-items:flex-start;gap:1rem}
+  .space-gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .space-gallery .big{grid-column:span 2;height:260px}
+  .space-gallery img:not(.big){height:180px}
+  .plans-grid{grid-template-columns:1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1rem;padding:2rem 1.5rem;text-align:center}
+}
+-->
+</head>
+
+<body>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5534999999999?text=Olá! Gostaria de conhecer a IronPeak Academia." class="wa-btn"
+    target="_blank" title="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">IRON<span>PEAK</span></a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#modalidades">Modalidades</a></li>
+      <li><a href="#instrutores">Instrutores</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+    </ul>
+    <a href="#planos" class="nav-cta">Começar Agora</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Academia Premium · Uberaba, MG</span>
+      <h1 class="hero-title">FORJE SEU<br><span>MELHOR</span><br>CORPO</h1>
+      <p class="hero-sub">Equipamentos de alta performance, instrutores certificados e uma metodologia que transforma
+        resultados em realidade.</p>
+      <div class="hero-actions">
+        <a href="#planos" class="btn-primary">Experimente Grátis</a>
+        <a href="#modalidades" class="btn-outline">Ver Modalidades</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-num">12</div>
+      <div class="hero-badge-lbl">Anos de Excelência</div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">3.200+</div>
+      <div class="stat-lbl">Alunos Ativos</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num">45+</div>
+      <div class="stat-lbl">Modalidades</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num">28</div>
+      <div class="stat-lbl">Instrutores</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num">24h</div>
+      <div class="stat-lbl">Acesso Livre</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num">98%</div>
+      <div class="stat-lbl">Satisfação</div>
+    </div>
+  </div>
+
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip">
+    <div class="photo-strip-item">
+      <img src="../images/hero.jpg" alt="Área de musculação">
+      <span class="overlay-label">Musculação</span>
+    </div>
+    <div class="photo-strip-item">
+      <img src="../images/photo-functional.jpg" alt="Área funcional">
+      <span class="overlay-label">Funcional</span>
+    </div>
+    <div class="photo-strip-item">
+      <img src="../images/photo-spinning.jpg" alt="Spinning">
+      <span class="overlay-label">Spinning</span>
+    </div>
+    <div class="photo-strip-item">
+      <img src="../images/photo-structure.jpg" alt="Vestiário">
+      <span class="overlay-label">Estrutura</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="sobre">
+    <div class="about-imgs">
+      <img src="../images/about-main.jpg" alt="Interior da academia">
+      <img src="../images/about-equipment.jpg" alt="Equipamentos" loading="lazy">
+      <img src="../images/about-training.jpg" alt="Treino" loading="lazy">
+    </div>
+    <div class="about-text-wrap">
+      <span class="section-label">Nossa história</span>
+      <h2 class="section-title" style="font-size:clamp(2.5rem,5vw,4rem)">MAIS DO QUE UMA ACADEMIA</h2>
+      <p>A IronPeak nasceu da paixão pelo fitness e do compromisso em transformar vidas. Em Uberaba, somos referência em
+        treinamento de alta performance, combinando tecnologia de ponta com atendimento personalizado.</p>
+      <p>Nosso espaço foi projetado para oferecer a melhor experiência de treino: ambientes climatizados, vestiários
+        premium e equipamentos importados das maiores marcas mundiais.</p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-dot"></div>Equipamentos Life Fitness e Matrix
+        </div>
+        <div class="feature-item">
+          <div class="feature-dot"></div>Avaliação física e nutricional inclusa
+        </div>
+        <div class="feature-item">
+          <div class="feature-dot"></div>App de treinos exclusivo para alunos
+        </div>
+        <div class="feature-item">
+          <div class="feature-dot"></div>Estacionamento gratuito e seguro
+        </div>
+        <div class="feature-item">
+          <div class="feature-dot"></div>Wi-Fi de alta velocidade em toda a academia
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSES -->
+  <section class="classes" id="modalidades">
+    <div class="classes-intro">
+      <div>
+        <span class="section-label">O que oferecemos</span>
+        <h2 class="section-title" style="font-size:3.2rem">MODALIDADES</h2>
+      </div>
+      <a href="#planos" class="btn-primary">Ver Planos</a>
+    </div>
+    <div class="classes-grid">
+      <div class="class-card">
+        <img src="../images/class-strength.jpg" alt="Musculação" loading="lazy">
+        <div class="class-overlay">
+          <span class="class-name">MUSCULAÇÃO</span>
+          <span class="class-tag">Força · Hipertrofia</span>
+          <p class="class-desc">Treino de força com equipamentos de última geração.</p>
+        </div>
+      </div>
+      <div class="class-card">
+        <img src="../images/class-cycling.jpg" alt="Spinning" loading="lazy">
+        <div class="class-overlay">
+          <span class="class-name">SPINNING</span>
+          <span class="class-tag">Cardio · Resistência</span>
+          <p class="class-desc">Ciclismo indoor de alta intensidade com música envolvente.</p>
+        </div>
+      </div>
+      <div class="class-card">
+        <img src="../images/class-crossfit.jpg" alt="CrossFit" loading="lazy">
+        <div class="class-overlay">
+          <span class="class-name">CROSS FIT</span>
+          <span class="class-tag">HIIT · Funcional</span>
+          <p class="class-desc">Treinos funcionais de alta intensidade para todos os níveis.</p>
+        </div>
+      </div>
+      <div class="class-card">
+        <img src="../images/class-yoga.jpg" alt="Yoga" loading="lazy">
+        <div class="class-overlay">
+          <span class="class-name">YOGA</span>
+          <span class="class-tag">Flexibilidade · Bem-estar</span>
+          <p class="class-desc">Equilíbrio entre corpo e mente com instrutores certificados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section class="trainers" id="instrutores">
+    <span class="section-label">Nossa equipe</span>
+    <h2 class="section-title" style="font-size:3.2rem">INSTRUTORES</h2>
+    <div class="trainers-grid">
+      <div class="trainer-card">
+        <img src="../images/trainer-lucas.jpg" alt="Instrutor Lucas" loading="lazy">
+        <div class="trainer-info">
+          <span class="trainer-name">LUCAS FERREIRA</span>
+          <span class="trainer-role">Musculação · CREF 012345</span>
+        </div>
+      </div>
+      <div class="trainer-card">
+        <img src="../images/trainer-ana.jpg" alt="Instrutora Ana" loading="lazy">
+        <div class="trainer-info">
+          <span class="trainer-name">ANA BEATRIZ</span>
+          <span class="trainer-role">Yoga · Funcional</span>
+        </div>
+      </div>
+      <div class="trainer-card">
+        <img src="../images/trainer-rodrigo.jpg" alt="Instrutor Rodrigo" loading="lazy">
+        <div class="trainer-info">
+          <span class="trainer-name">RODRIGO MATOS</span>
+          <span class="trainer-role">CrossFit · Spinning</span>
+        </div>
+      </div>
+      <div class="trainer-card">
+        <img src="../images/trainer-camila.jpg" alt="Instrutora Camila" loading="lazy">
+        <div class="trainer-info">
+          <span class="trainer-name">CAMILA SOUZA</span>
+          <span class="trainer-role">Personal · Nutrição</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUCTURE -->
+  <section class="space" id="estrutura">
+    <span class="section-label">Conheça o espaço</span>
+    <h2 class="section-title" style="font-size:3.2rem">NOSSA ESTRUTURA</h2>
+    <div class="space-gallery">
+      <div class="big">
+        <img src="../images/hero.jpg" alt="Área principal" loading="lazy">
+      </div>
+      <img src="../images/space-cardio.jpg" alt="Área de cardio" loading="lazy">
+      <img src="../images/photo-structure.jpg" alt="Vestiário" loading="lazy">
+      <img src="../images/about-equipment.jpg" alt="Sala de aula" loading="lazy">
+      <img src="../images/photo-functional.jpg" alt="Área funcional" loading="lazy">
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="plans" id="planos">
+    <div class="plans-header">
+      <span class="section-label" style="text-align:center">Investimento</span>
+      <h2 class="section-title" style="font-size:3.5rem;text-align:center">ESCOLHA SEU PLANO</h2>
+    </div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">BÁSICO</div>
+        <div class="plan-price">
+          <span class="plan-currency">R$</span>
+          <span class="plan-amount">89</span>
+          <span class="plan-period">/mês</span>
+        </div>
+        <ul class="plan-features">
+          <li>Musculação livre</li>
+          <li>Acesso das 6h às 22h</li>
+          <li>Avaliação física inicial</li>
+          <li>Vestiário completo</li>
+          <li>Wi-Fi e estacionamento</li>
+        </ul>
+        <a class="plan-btn" href="https://wa.me/5534999999999?text=Quero o Plano Básico!" target="_blank">Escolher
+          Plano</a>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Mais Popular</div>
+        <div class="plan-name">PREMIUM</div>
+        <div class="plan-price">
+          <span class="plan-currency">R$</span>
+          <span class="plan-amount">139</span>
+          <span class="plan-period">/mês</span>
+        </div>
+        <ul class="plan-features">
+          <li>Tudo do Básico</li>
+          <li>Todas as aulas coletivas</li>
+          <li>Acesso 24 horas</li>
+          <li>Avaliações mensais</li>
+          <li>App de treinos premium</li>
+          <li>1 sessão de personal/mês</li>
+        </ul>
+        <a class="plan-btn" href="https://wa.me/5534999999999?text=Quero o Plano Premium!" target="_blank">Escolher
+          Plano</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">ELITE</div>
+        <div class="plan-price">
+          <span class="plan-currency">R$</span>
+          <span class="plan-amount">239</span>
+          <span class="plan-period">/mês</span>
+        </div>
+        <ul class="plan-features">
+          <li>Tudo do Premium</li>
+          <li>Personal trainer 4x/semana</li>
+          <li>Consulta com nutricionista</li>
+          <li>Acesso à área VIP</li>
+          <li>Suplementos básicos incluso</li>
+          <li>Prioridade em agendamentos</li>
+        </ul>
+        <a class="plan-btn" href="https://wa.me/5534999999999?text=Quero o Plano Elite!" target="_blank">Escolher
+          Plano</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="depoimentos">
+    <span class="section-label">Resultados reais</span>
+    <h2 class="section-title" style="font-size:3.2rem">O QUE NOSSOS ALUNOS DIZEM</h2>
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <div class="testi-quote">❝</div>
+        <p class="testi-text">Em 6 meses perdi 18kg e ganhei uma qualidade de vida que não acreditava ser possível. Os
+          instrutores são excepcionais e o ambiente é muito motivador.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">CM</div>
+          <div>
+            <div class="testi-name">Carlos Mendes</div>
+            <div class="testi-since">Aluno desde 2022</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">❝</div>
+        <p class="testi-text">A melhor academia de Uberaba, sem dúvidas. Equipamentos sempre em dia, estrutura impecável
+          e um staff que realmente se preocupa com seu progresso.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AS</div>
+          <div>
+            <div class="testi-name">Ana Silva</div>
+            <div class="testi-since">Aluna desde 2021</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">❝</div>
+        <p class="testi-text">Já treinei em várias academias, mas a IronPeak é outro nível. O plano Elite com personal
+          mudou completamente meu físico em apenas 4 meses.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RO</div>
+          <div>
+            <div class="testi-name">Rafael Oliveira</div>
+            <div class="testi-since">Aluno desde 2023</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contato">
+    <div class="cta-bg"></div>
+    <div class="cta-inner">
+      <h2 class="cta-title">PRONTO PARA<br><span>TRANSFORMAR</span><br>SUA VIDA?</h2>
+      <p class="cta-sub">Primeira semana grátis. Sem compromisso. Comece hoje.</p>
+      <a href="https://wa.me/5534999999999?text=Quero agendar uma visita gratuita na IronPeak!" class="btn-primary"
+        style="font-size:0.88rem;padding:1.1rem 3rem" target="_blank">Agendar Visita Gratuita</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">IRON<span>PEAK</span></div>
+    <div class="footer-copy">© 2025 IronPeak Academia · Uberaba, MG</div>
+    <div class="footer-social">
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://wa.me/5534999999999" target="_blank">WhatsApp</a>
+      <a href="https://youtube.com" target="_blank">YouTube</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
